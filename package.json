@@ -1,0 +1,49 @@
+{
+  "name": "wake-up-challenge",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Smart contract-based wake-up challenge with social features",
+  "main": "backend/server.js",
+  "scripts": {
+    "dev": "nodemon backend/server.js",
+    "backend": "node backend/server.js",
+    "frontend": "cd frontend && npm start",
+    "contracts:compile": "hardhat compile",
+    "contracts:deploy": "hardhat run scripts/deploy.js --network sepolia",
+    "contracts:test": "mocha --require hardhat/register \"test/**/*.cjs\"",
+    "test": "npm run contracts:test",
+    "install-all": "npm install && cd frontend && npm install && cd ..",
+    "start": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "keywords": [
+    "blockchain",
+    "wake-up",
+    "challenge",
+    "smart-contract"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@openzeppelin/contracts": "^4.9.4",
+    "axios": "^1.6.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.8.1",
+    "express": "^4.18.2",
+    "hardhat": "^2.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^7.5.2",
+    "web3": "^4.0.3"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "chai": "^4.3.10",
+    "concurrently": "^8.2.1",
+    "ethers": "^6.8.1",
+    "hardhat": "^2.17.1",
+    "nodemon": "^3.0.1"
+  }
+}

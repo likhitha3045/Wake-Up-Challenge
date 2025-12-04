@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Build
+dist/
+build/
+coverage/
+artifacts/
+.cache/
+
+# Hardhat
+.hardhat_modules/
+cache/
+
+# React
+build/
+.DS_Store
+
+# Backend
+tmp/
+logs/
+*.tmp
+
+# Testing
+.nyc_output/
+.coverage/
+
+# Contract
+.openzeppelin/
